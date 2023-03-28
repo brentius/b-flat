@@ -1,0 +1,128 @@
+SYNTAX:
+
+KEYWORDS:
+
+output (similar to "print" in python)
+reorder (reorders items in list/dictionary) -> usage: reorder <list_name>, <reorder_method (alph/-alph/num/-num)> -> example: reorder my_list, -alph
+dclr (declare item, usage: see below)
+
+OPERATORS:
+
+add -> + (e.g. x+y)
+subtract -> - (e.g. x-y)
+multiply -> * (e.g. x*y)
+divide -> / (e.g. x/y)
+exponent -> ^ (e.g. x^y, x=base, y=exponent)
+larger than -> x>y
+smaller than -> x<y
+larger or equal to -> x>=y
+smaller or equal to -> x<=y
+factorial -> ! (e.g. x!)
+join -> & (join two strings together- e.g. x&y = xy)
+
+CLASSES:
+
+ALWAYS PUT "dclr" IN FRONT OF ALL ITEM DECLATATIONS
+dclr: declare item (usage: dclr <item_name>: <item_class>{<item_value(s)>})
+example: dclr name: var{john} *letters are set to strings by default
+
+ITEM CLASSES:
+
+var (variable- 1 item value only) -> example: dclr my_var: var{7} *numbers are set to int by default
+lst (list- item values separated by commas) -> example: dclr my_list: lst{1,2,3,4,5}
+
+When mentioning items in output statements, use this format: <item_class>{item_value}
+
+DATA TYPES:
+
+string -> to turn to string, put in square brackets, e.g. [<string_content>]
+integer -> put in round brackets, e.g. (<number>)
+
+LOOPS:
+
+forever -> (infinite loop)
+repeat n -> (repeat n times)
+
+CONDITIONALS:
+
+when -> ("if")
+
+INPUTS
+
+ans [question] -> what is set inside there is automatically set to string
+
+example:
+
+program.START
+
+forever
+	declr the_answer: var{ans [What is 2+2?]}
+	when (the_answer) is 2:
+		output [You got it right!]
+	if not
+		output [You got it wrong, sorry. Please try again.]
+
+program.END
+
+LIBRARIES:
+
+Add library: lib add <library_name>
+e.g. lib add tensorflow
+
+Add specific module: lib add <module_name> from <library_name>
+e.g. lib add tensors from tensorflow
+
+Installing Libraries:
+libre get <libary_name>
+
+COMMENTS:
+
+$ -> start comment
+
+e.g.
+program.START
+	$ start main program
+	dclr num_1: var{ans[How are you?]}
+program.END
+
+Multiline comments:
+
+
+OTHER SYNTAX NOTES:
+
+- "program.START" at start of program
+- "program.END" at end of every program
+
+EXAMPLE PROGRAM:
+
+program.START
+
+output [Hello World!]
+
+program.END
+
+OUTPUT:
+
+Hello World!
+
+OTHER EXAMPLE:
+
+program.START
+
+dclr num_1: var{ans [Input a number.]}
+dclr num_2: var{ans [Input another number.]}
+output (num_1)+(num+2)
+
+program.END
+
+
+A THIRD EXAMPLE:
+
+program.START
+
+dclr name: var{ans [What is your name?]}
+output [Hello, var{name}!]
+
+program.END
+
+Copyright 2023 Brent Yee
