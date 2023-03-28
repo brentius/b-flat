@@ -121,7 +121,7 @@ A THIRD EXAMPLE:
 program.START
 
 dclr name: var{ans [What is your name?]}
-output [Hello, var{name}!]
+output [Hello]& var{name} & [!]
 
 program.END
 
