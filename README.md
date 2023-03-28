@@ -1,2 +1,2 @@
-# aspiria
-A general- purpose, open- source programming language.
+# peregrine
+A general- purpose, open- source programming language based on python
